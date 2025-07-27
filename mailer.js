@@ -3,15 +3,15 @@ const nodemailer = require("nodemailer")
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "sales@industechautomations.in",
-    pass: process.env.MAIL_PASS,
+    user: "abinyt1234@gmail.com",
+    pass: process.env.MAIL_PASS || 'tmxn wxqn kmky zqbj',
   },
 })
 
 function sendMail(customerMail, filename, filepath, sub = true) {
   return new Promise((resolve, reject) => {
     const mailOptions = {
-      from: "abinyt1234@gmail.com",
+      from: "sales@industechautomations.in",
       to: customerMail,
       subject: sub
         ? "Quotation from IndusTech Automations"
